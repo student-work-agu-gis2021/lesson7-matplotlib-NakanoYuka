@@ -10,13 +10,13 @@
 # File `data/helsinki-vantaa.csv` monthly average temperatures from Helsinki Vantaa airport. Column descriptions:
 # 
 # ### Part 1
-# 
 # Load the Helsinki temperature data (`data/helsinki-vantaa.csv`)
 # 
 # - Read the data into variable called `data` using pandas
 # - Parse dates from the column `'DATE'` and set the dates as index in the dataframe 
 
 # YOUR CODE HERE 1 to read the data into data and parse dates
+#read the data into data and parse dates with pandas
 
 # This test print should print first five rows
 print(data.head())

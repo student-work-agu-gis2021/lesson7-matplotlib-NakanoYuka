@@ -19,9 +19,10 @@ import numpy as np
 import pandas as pd
 
 # YOUR CODE HERE 1 to set data
-#define data
-data = pd.DataFrame(columns=['x','y'])
-data = pd.DataFrame({'x':np.random.rand(1000),'y':np.random.rand(1000)})
+#use random
+x=np.random.rand(1000)
+y=np.random.rand(1000)
+data = pd.DataFrame(zip(x,y),columns=['x','y'])
 # Check your random values
 print(data.head())
 
@@ -34,7 +35,7 @@ assert len(data) == 1000, "There should be 1000 rows of data."
 
 # YOUR CODE HERE 2 to set colors
 #set colors
-colors=list(np.random.choice(range(256),size=1000))
+colors=tuple(np.random.choice(range(256),size=1000))
 # This test print should print out 10 first numbers in the variable colors
 print(colors[0:10])
 
@@ -55,22 +56,20 @@ assert len(colors) == 1000, "There should be 1000 random numbers for colors"
 
 # Plot a scatter plot
 # YOUR CODE HERE 3
-pd.DataFrame.plot.scatter(self=null,x=data['x'],y=data['y'],s=50,c=colors,colormap='rainbow',edgecolor= 'black')
+import matplotlib.pyplot as plt
+plt.scatter(x,y,s =50,c=colors,cmap='jet',edgecolor= 'black')
 # Add labels and title
 # YOUR CODE HERE 4
-title='My random candy points'
-xlabel='X-label'
-ylabel='Y-label'
-import matplotlib.pyplot as plt
-plt.Axes.set_title(title)
-plt.Axes.set_xlabel(xlabel)
-plt.Axes.set_ylabel(ylabel)
+plt.title("My random candy points")
+plt.xlabel("X-label")
+plt.ylabel("Y-label")
+plt.show()
 
 # Save the plot as a png file:
 outputfp = "my_first_plot.png"
 
 # YOUR CODE HERE 5
-plt.savefig('my_first_plot.png')
+
 # This test print statement should print the output filename of your figure
 print("Saved my first plot as:", outputfp)
 
