@@ -58,6 +58,13 @@ assert len(colors) == 1000, "There should be 1000 random numbers for colors"
 pd.DataFrame.plot.scatter(self=null,x=data['x'],y=data['y'],s=50,c=colors,colormap='rainbow',edgecolor= 'black')
 # Add labels and title
 # YOUR CODE HERE 4
+title='My random candy points'
+xlabel='X-label'
+ylabel='Y-label'
+import matplotlib.pyplot as plt
+plt.Axes.set_title(title)
+plt.Axes.set_xlabel(xlabel)
+plt.Axes.set_ylabel(ylabel)
 
 # Save the plot as a png file:
 outputfp = "my_first_plot.png"
