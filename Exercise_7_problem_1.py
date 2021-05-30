@@ -55,7 +55,7 @@ assert len(colors) == 1000, "There should be 1000 random numbers for colors"
 
 # Plot a scatter plot
 # YOUR CODE HERE 3
-
+pd.DataFrame.plot.scatter(self=null,x=data['x'],y=data['y'],s=50,c=colors,colormap='rainbow',edgecolor= 'black')
 # Add labels and title
 # YOUR CODE HERE 4
 
