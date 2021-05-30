@@ -67,7 +67,7 @@ plt.show()
 # Set output file name
 outputfp = "temp_line_plot.png"
 
-# Save plot as image
+# Save plot as images
 # YOUR CODE HERE 4
 plt.savefig(outputfp)
 import os
